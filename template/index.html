@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>chart</title>
+</head>
+<body>
+    <div class="main">
+        <h1>chart</h1>
+        <h2>chart is an app were you can stay anynimos will talking</h2>
+        {% for i in msgs %}
+        <p>{{ i }}</p>
+        {% endfor %}
+        <form method="post" action="{{main}}">
+            <input type="text" name="msg">
+            <button type="submit">send</button>
+        </form>
+    </div>
+</body>
+</html>
