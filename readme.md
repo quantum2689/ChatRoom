@@ -4,7 +4,7 @@
 
 ## How to use it
 
-first downlode python from (here)[https://www.python.org/]
+first downlode python from [here](https://www.python.org/)
 
 **but if you are on linux you can use the setup.sh**
 
