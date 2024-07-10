@@ -2,6 +2,8 @@ from flask import Flask,request,render_template , redirect, url_for
 # YOU CAN'T USE THIS APP AS A PROUDCTION APP
 app = Flask(__name__,template_folder="template")
 
+
+
 msgs = []
 
 @app.route("/",methods=["POST","GET"])
