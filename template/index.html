@@ -11,9 +11,11 @@
     <div class="main">
         <h1>chart</h1>
         <h2>chart is an app were you can stay anynimos will talking</h2>
-        {% for i in msgs %}
-        <p>{{ i }}</p>
-        {% endfor %}
+        <ul>
+            {% for msg in msgs %}
+            <li>{{ msg['msg'] }}</li>
+            {% endfor %}
+        </ul>
         <form method="post" action="{{main}}">
             <input type="text" name="msg">
             <button type="submit">send</button>

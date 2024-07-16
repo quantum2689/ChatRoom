@@ -1,4 +1,4 @@
-## chart
+### chartRoom was known as chart before 
 
 **chart is a chat app writen in flask python**
 
@@ -13,3 +13,8 @@ first downlode python from [here](https://www.python.org/)
 ```git clone https://github.com/quantum2689/chart.git```
 
 **but if you on linux clone the project then run setup.sh and it wwill downlode it and run it**
+
+### what is new stuff
+chart was storing the msgs in a list but this store it  [Tinydb](https://github.com/msiemens/tinydbl)
+
+which can support more users and msgs which makes ChatRoom a great option for self-hosting your

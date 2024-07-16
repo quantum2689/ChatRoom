@@ -1,20 +1,25 @@
-from flask import Flask,request,render_template , redirect, url_for
-# YOU CAN'T USE THIS APP AS A PROUDCTION APP
-app = Flask(__name__,template_folder="template")
+from flask import Flask, request, render_template, redirect, url_for
+from tinydb import TinyDB, Query
 
+app = Flask(__name__, template_folder="template")
 
+# Initialize TinyDB
+db = TinyDB('db.json')
 
-msgs = []
-
-@app.route("/",methods=["POST","GET"])
+@app.route("/", methods=["POST", "GET"])
 def main():
     if request.method == "GET":
-        return render_template("index.html",msgs=msgs, main=url_for('main'))
-    if request.method == 'POST':
+        # Fetch all messages from TinyDB
+        msgs = db.all()
+        return render_template("index.html", msgs=msgs, main=url_for('main'))
+    if request.method == "POST":
         new_msg = request.form['msg']
         if new_msg:
-            msgs.append(new_msg)
+            # Insert the new message into TinyDB
+            db.insert({'msg': new_msg})
         return redirect(url_for('main'))
-    return render_template('chart.html', msgs=msgs, main=url_for('main'))
+    return render_template('index.html', msgs=msgs, main=url_for('main'))
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
+

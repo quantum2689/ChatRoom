@@ -22,3 +22,7 @@ h1,p,h2 {
     overflow: hidden; /* Ensure no overflow */
     background: rgb(47, 46, 46);
 }
+
+li {
+    color: white;
+}
