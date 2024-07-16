@@ -1,3 +1,4 @@
+*
 ### chartRoom was known as chart before 
 
 **chart is a chat app writen in flask python**
@@ -20,3 +21,4 @@ chart was storing the msgs in a list but this store it  [Tinydb](https://github.
 which can support more users and msgs which makes ChatRoom a great option for self-hosting your
 
 ## YOU KNOW CAN USE IT FOR PRODUCTION
+## AND DO NOT INSTALL FROM SOURCE
